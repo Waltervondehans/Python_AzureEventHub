@@ -1,8 +1,8 @@
-import SendEvent
+import EventHost
 import socket
 import Config
 
-hubClient = SendEvent.EventHubClient()
+hubClient = EventHost.EventHubClient()
 #CONFIG
 hubClient.serviceHubName=Config.serviceHubName
 hubClient.eventHubName=Config.eventHubName
@@ -10,7 +10,7 @@ hubClient.sasKeyName=Config.sasKeyName
 hubClient.sasKeyValue=Config.sasKeyValue
 ##CONFIG_Ende
 
-parser = SendEvent.EventDataParser()
+parser = EventHost.EventDataParser()
 hostname = socket.gethostname()
 
 i=0
