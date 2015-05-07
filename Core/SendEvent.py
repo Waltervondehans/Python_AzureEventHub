@@ -1,15 +1,13 @@
-import socket
-
 import SendEvent
-from Python_AzureEventHub.Core import Config
-
+import socket
+import Config
 
 hubClient = SendEvent.EventHubClient()
 #CONFIG
-hubClient.serviceHubName= Config.serviceHubName
-hubClient.eventHubName= Config.eventHubName
-hubClient.sasKeyName= Config.sasKeyName
-hubClient.sasKeyValue= Config.sasKeyValue
+hubClient.serviceHubName=Config.serviceHubName
+hubClient.eventHubName=Config.eventHubName
+hubClient.sasKeyName=Config.sasKeyName
+hubClient.sasKeyValue=Config.sasKeyValue
 ##CONFIG_Ende
 
 parser = SendEvent.EventDataParser()
@@ -31,4 +29,3 @@ while  i<100:
     # return the HTTP status to the caller
     print hubStatus," i:",i
     i=i+1
-
