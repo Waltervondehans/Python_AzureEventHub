@@ -1,13 +1,15 @@
-import SendEvent
 import socket
-import Config
+
+import SendEvent
+from Python_AzureEventHub.Core import Config
+
 
 hubClient = SendEvent.EventHubClient()
 #CONFIG
-hubClient.serviceHubName=Config.serviceHubName
-hubClient.eventHubName=Config.eventHubName
-hubClient.sasKeyName=Config.sasKeyName
-hubClient.sasKeyValue=Config.sasKeyValue
+hubClient.serviceHubName= Config.serviceHubName
+hubClient.eventHubName= Config.eventHubName
+hubClient.sasKeyName= Config.sasKeyName
+hubClient.sasKeyValue= Config.sasKeyValue
 ##CONFIG_Ende
 
 parser = SendEvent.EventDataParser()
